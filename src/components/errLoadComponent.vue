@@ -1,3 +1,3 @@
 <template >
-this component is not be loaded
+This component will not be loaded and displayed
 </template>
