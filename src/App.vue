@@ -1,10 +1,18 @@
 <script setup>
-import {defineAsyncComponent} from 'vue'
+
+import {defineAsyncComponent,computed} from 'vue'
 const asyncComponent= defineAsyncComponent(() => import('./components/asyncComponent.vue'));
+
+
+ const getComponent = computed(() => {
+
+    return asyncComponent;
+
+});
 </script>
 
-<template src="./html/index.html">
-
+<template >
+<component :is="getComponent"></component>
 </template>
 
 <style>
